@@ -92,6 +92,10 @@ div.part {
     flex-direction: column;
 }
 
+div#body > div.part:nth-child(1) {
+    display: flex;
+}
+
 div#menu {
     display: flex;
     width: 60vw;
