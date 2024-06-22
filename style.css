@@ -65,8 +65,18 @@ h1 {
     margin-bottom: 0;
 }
 
+ul {
+    padding-left: 1em;
+}
+
+p.example {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    font-style: italic;
+}
+
 li.definition {
-    margin-top: 1em;
+    margin-top: 1.2em;
 }
 
 p.phonetic {
@@ -119,10 +129,11 @@ p.part-body {
 
     div#menu {
         width: 90vw;
+        flex-wrap: wrap;
     }
 
     body {
-        margin: 0;
+        margin: 2vh 1vw 0 1vw;
     }
 
 }

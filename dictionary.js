@@ -46,6 +46,7 @@ function checkIfExistsAndAppend(definition){
     } else if (definition.title != "No Definitions Found") {
         clear();
         buildDom();
+
     } else {
         clear();
         error();
@@ -62,11 +63,10 @@ function buildDom() {
     title.textContent = definition[0].word;
     menu.insertAdjacentElement("beforebegin",title);
 
-    const phonetic = document.createElement("p");
-    phonetic.className = "phonetic"
+
+    const phonetic = document.querySelector("p.phonetic");
     phonetic.textContent = definition[0].phonetic;
     
-    menu.insertAdjacentElement("afterend",phonetic);
 
     definition.forEach((element) => {
 
@@ -92,16 +92,17 @@ function buildDom() {
             divBody.appendChild(div);
 
             element1.definitions.forEach((element2) => {
-
-                const definition = document.createElement("p");
+                const definitionUL = document.createElement("ul");
+                const definition = document.createElement("li");
                 definition.className = "definition"
                 definition.textContent = element2.definition;
-                div.appendChild(definition);
+                definitionUL.appendChild(definition);
+                div.appendChild(definitionUL);
 
                 if (element2.example != undefined) {
                     const example = document.createElement("p");
                     example.className = "example"
-                    example.textContent = `Example: ${element2.example}`;
+                    example.textContent = `${element2.example}`;
                     div.appendChild(example);
                 }
 
@@ -130,6 +131,7 @@ function hideParts() {
 }
 
 function clear() {
+    document.querySelector("p.phonetic").innerHTML = "";
     divBody.innerHTML = "";
     menu.innerHTML = "";
     title.innerHTML = "";
