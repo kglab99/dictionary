@@ -108,6 +108,11 @@ p.part-body {
 
 /* Mobile */
 @media screen and (max-width: 900px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
     div#body {
         width: 90vw;
     }
