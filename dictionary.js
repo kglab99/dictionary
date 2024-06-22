@@ -1,6 +1,3 @@
-// Dictionary deconstruction
-
-
 // Main functions
 let definition;
 
@@ -47,10 +44,8 @@ function checkIfExistsAndAppend(definition){
         clear();
         error();
     } else if (definition.title != "No Definitions Found") {
-        console.log(definition);
         clear();
-        deconstruct();
-        // createDom();
+        buildDom();
     } else {
         clear();
         error();
@@ -58,18 +53,12 @@ function checkIfExistsAndAppend(definition){
 
 }
 
-function clear() {
-    divBody.innerHTML = "";
-    menu.innerHTML = "";
-    title.innerHTML = "";
-}
-
-// Create DOM
+// build DOM
 const divBody = document.querySelector("div#body");
 const menu = document.querySelector("div#menu");
 const title = document.querySelector("h1");
 
-function deconstruct() {
+function buildDom() {
     title.textContent = definition[0].word;
     menu.insertAdjacentElement("beforebegin",title);
 
@@ -138,4 +127,10 @@ function hideParts() {
         partDiv.style.display = "none";
     }
 
+}
+
+function clear() {
+    divBody.innerHTML = "";
+    menu.innerHTML = "";
+    title.innerHTML = "";
 }
