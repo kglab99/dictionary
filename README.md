@@ -1,1 +1,1 @@
-### [live preview](kglab99.github.io/dictionary/)
+### [live preview](https://kglab99.github.io/dictionary/)
