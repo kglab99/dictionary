@@ -9,7 +9,7 @@ async function fetchWord(word) {
     return await response.json();
   }
 
-checkWord("set");
+checkWord("programming");
 
 function checkWord (word) {
     fetchWord(word)

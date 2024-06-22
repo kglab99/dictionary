@@ -5,6 +5,8 @@
     align-items: center;
     position: relative;
     width: 90vw;
+
+
    }
    
    .input {
@@ -13,7 +15,7 @@
     line-height: 28px;
     padding: 0 1rem;
     padding-left: 2.5rem;
-    border: 2px solid transparent;
+    border: 1px solid black;
     border-radius: 8px;
     outline: none;
     color: #0d0c22;
@@ -75,10 +77,47 @@ p.type {
     margin-top: 0.5em;
 }
 
+div.part {
+    display: none;
+    flex-direction: column;
+}
+
+div#menu {
+    display: flex;
+    width: 60vw;
+    justify-content: flex-start;
+    gap: 2em;    
+
+}
+
+div#menu {
+    
+    p.part:hover,
+    p.part:focus,
+    p.part:enabled {
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+}
+
+p.part-body {
+    font-weight: 600;
+    font-size: 1.2em;
+}
 
 /* Mobile */
 @media screen and (max-width: 900px) {
     div#body {
         width: 90vw;
     }
+
+    div#menu {
+        width: 90vw;
+    }
+
+    body {
+        margin: 0;
+    }
+
 }
