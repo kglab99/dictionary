@@ -115,6 +115,11 @@ div#menu {
 
 }
 
+p.part {
+    
+}
+  
+
 p.part-body {
     font-weight: 600;
     font-size: 1.2em;
@@ -141,3 +146,33 @@ p.part-body {
     }
 
 }
+
+
+p.part {
+    font-size: 1.2em;
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+  }
+  
+  p.part:focus:after,
+  p.part:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  p.part:after {
+    content: "";
+    pointer-events: none;
+    bottom: -3px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
