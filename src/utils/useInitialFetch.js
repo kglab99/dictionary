@@ -1,7 +1,5 @@
-// useInitialFetch.js
 import { useEffect } from 'react';
-import { fetchWord } from './api'; // Import the fetchWord function
-
+import { fetchWord } from './api'; 
 export const useInitialFetch = (setDefinition, setError) => {
   useEffect(() => {
     const fetchInitialDefinition = async () => {
@@ -14,5 +12,5 @@ export const useInitialFetch = (setDefinition, setError) => {
     };
 
     fetchInitialDefinition();
-  }, [setDefinition, setError]); // Include dependencies if they change
+  }, [setDefinition, setError]);
 };

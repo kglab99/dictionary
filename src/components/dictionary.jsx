@@ -1,26 +1,24 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import Box from "@mui/joy/Box";
 import Input from "@mui/joy/Input";
 import SearchIcon from "@mui/icons-material/Search";
 import Word from "./word";
 import { Typography } from "@mui/joy";
-import { handleChange, handleKeyDown } from "../utils/handlers"; // Import the handle functions
-import { useInitialFetch } from "../utils/useInitialFetch"; // Import the custom hook
-
+import { handleChange, handleKeyDown } from "../utils/handlers";
+import { useInitialFetch } from "../utils/useInitialFetch";
 export default function Dictionary() {
   const [inputValue, setInputValue] = useState("");
   const [definition, setDefinition] = useState(null);
   const [error, setError] = useState(null);
 
-  const inputRef = useRef(null); // Ref for the input field
+  const inputRef = useRef(null); 
 
   const setRef = (element) => {
     if (element) {
-      inputRef.current = element.querySelector("input"); // Adjust to get the correct input element
+      inputRef.current = element.querySelector("input"); 
     }
   };
 
-  // Use the custom hook for fetching the initial definition
   useInitialFetch(setDefinition, setError);
 
   return (
@@ -46,20 +44,20 @@ export default function Dictionary() {
         }}
       >
         <Input
-          ref={setRef} // Use the callback ref
+          ref={setRef}
           startDecorator={<SearchIcon />}
           placeholder="Search"
           variant="outlined"
           fullWidth={true}
           value={inputValue}
-          onChange={handleChange(setInputValue)} // Use the imported handler
+          onChange={handleChange(setInputValue)} 
           onKeyDown={handleKeyDown(
             inputValue,
             setDefinition,
             setInputValue,
             setError,
             inputRef
-          )} // Use the imported handler
+          )}
         />
         {error && (
           <Box sx={{ width: "100%", mt: 2 }}>

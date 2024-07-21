@@ -23,19 +23,9 @@ export const theme = extendTheme({
     },
   },
   fontFamily: {
-    display: "Lora", // applies to `h1`–`h4`
-    body: "Lora", // applies to `title-*` and `body-*`
-    input: "Inter", // Specify the font for input fields
-  },
-  components: {
-    JoyInput: {
-      styleOverrides: {
-        input: {
-          fontFamily: "Inter", // Apply the Inter font to Input component
-        },
-      },
-    },
-  },
+    display: "Lora", 
+    body: "Lora", 
+  }, 
 });
 
 export default theme;

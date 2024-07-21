@@ -1,4 +1,3 @@
-// useWordLogic.js
 import { useState } from 'react';
 
 export function useWordLogic(definition) {
