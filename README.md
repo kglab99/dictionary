@@ -9,7 +9,7 @@ A React-based dictionary app that allows users to search for words and view thei
 ## Technologies Used
 
 - React
-- MUI (Material UI)
+- MUI (Joy UI)
 - Framer Motion
 - Dictionary API (https://dictionaryapi.dev/)
 - CSS for custom styling
