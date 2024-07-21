@@ -1,3 +1,7 @@
+## Live Demo
+
+You can see the app in action [here](https://dictionary-joy.netlify.app/).
+
 # Dictionary App
 
 A React-based dictionary app that allows users to search for words and view their definitions. The app fetches data from a public dictionary API and provides a user-friendly interface with responsive design.
@@ -10,6 +14,3 @@ A React-based dictionary app that allows users to search for words and view thei
 - Dictionary API (https://dictionaryapi.dev/)
 - CSS for custom styling
 
-## Live Demo
-
-You can see the app in action [here](https://dictionary-joy.netlify.app/).
